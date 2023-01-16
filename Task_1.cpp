@@ -1,11 +1,14 @@
 #include <iostream>
-#define MON "Monday"
-#define TUE "Tuesday"
-#define WED "Wednesday"
-#define THU "Thursday"
-#define FRI "Friday"
-#define SAT "Saturday"
-#define SUN "Sunday"
+
+#define DAY1 "Monday"
+#define DAY2 "Tuesday"
+#define DAY3 "Wednesday"
+#define DAY4 "Thursday"
+#define DAY5 "Friday"
+#define DAY6 "Saturday"
+#define DAY7 "Sunday"
+#define NUM_DAY(num) (std::cout << DAY##num)
+#define INV "Invalid code!"
 
 int main() {
     int n;
@@ -13,35 +16,35 @@ int main() {
     std::cin >> n;
     switch (n) {
         case 1: {
-            std::cout << MON << std::endl;
+            NUM_DAY(1);
             break;
         }
         case 2: {
-            std::cout << TUE << std::endl;
+            NUM_DAY(2);
             break;
         }
         case 3: {
-            std::cout << WED << std::endl;
+            NUM_DAY(3);
             break;
         }
         case 4: {
-            std::cout << THU << std::endl;
+            NUM_DAY(4);
             break;
         }
         case 5: {
-            std::cout << FRI << std::endl;
+            NUM_DAY(5);
             break;
         }
         case 6: {
-            std::cout << SAT << std::endl;
+            NUM_DAY(6);
             break;
         }
         case 7: {
-            std::cout << SUN << std::endl;
+            NUM_DAY(7);
             break;
         }
         default : {
-            std::cout << "Invalid code!";
+            std::cout << INV;
             break;
         }
     }
